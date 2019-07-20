@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Cat&aacute;logo de Alumnos</h1>
+  <table class="table table-striped">
+    <thead class="nuevocolor">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">ALUMNO</th>
+        <th scope="col">CARRERA</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for alumno in alumnos %}
+        <tr>
+          <td>{{ forloop.counter }}</td>
+          <td>{{ alumno.nombre }}</td> 
+          <td><a href="{{alumno.carrera.get_absolute_url}}">{{ alumno.carrera }}</a></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock content %}

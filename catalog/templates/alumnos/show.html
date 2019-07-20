@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <article>
+    <header>
+      <h1>{{ book.title }}</h1>
+      <h2>
+        Escrito por <strong><a href="{{ book.author.get_absolute_url }}">{{ book.author }}</a></strong>
+      </h2>
+      <h5>
+        Genero: {{ book.display_genre }} Idioma: {{ book.language }} ISBN: {{ book.isbn }}
+      </h5>
+    </header>
+    <section style="text-align: left">
+      {{ book.summary }}
+    </section>
+    <img src="{{ book.url_image }}" alt="{{ book.isbn }}">
+  </article>
+ {% endblock content %}

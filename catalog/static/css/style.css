@@ -1,0 +1,22 @@
+body {
+  padding-top: 5rem;
+}
+
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+img {
+  margin-top: 20px;
+  width: 400px;
+  height: 600px;
+}
+
+nav {
+  background-color: rgb(151, 93, 5);
+}
+table > thead.nuevocolor{
+   background-color: rgb(204, 174, 115);
+   color: brown;
+}
